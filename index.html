@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>memes</title>
+<style type="text/css">
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex: 1;
+    width: 100vmin;
+    height: 100vmin;
+    padding: 50px;
+    overflow: hidden;
+}
+
+span {
+    font-family: helvetica;
+    border: none;
+    font-size: 5vmin;
+    padding-bottom: 10px;
+}
+
+#image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: center;
+    background-position: top left;
+    flex:1;
+    height: 100%;
+}
+
+#image div {
+    position: relative;
+    width: 100%; height: 100%;
+}
+
+input[type=file] {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+#save {
+    position: fixed;
+    bottom: 0; left: 0;
+}
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <span id="text" contenteditable="true">start typing a meme</span>
+    <div id="image" style="background-image: url(assets/img/placeholder.png);">
+      <div><input type="file"></div>
+    </div>
+  </div>
+</body>
+<script src="assets/app.concat.js"></script>
+</html>

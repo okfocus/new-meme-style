@@ -1,0 +1,15 @@
+{
+  "name": "new-meme-style",
+  "version": "1.0.0",
+  "description": "new meme style",
+  "main": "index.js",
+  "author": "okfocus <frontdesk@okfoc.us>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-concat-sourcemap": "^0.4.3",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
