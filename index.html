@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>memes</title>
     <style type="text/css">
     * {
@@ -18,33 +19,35 @@
     }
     
     .rapper {
+        margin: 0 auto;
+        width: 60vh;
         display: flex;
         flex-direction: column;
-        width: 60vh;
-        margin: 0 auto;
+        min-height: 100vh;
         justify-content: center;
-        height: 100vh;
     }
     
     h1 {
-        margin-top: 10px;
+        margin: 10px 0;
         font-weight: bold;
-        font-size: 7vmin;
+        font-size: 6vmin;
+    }
+    
+    .desktop h1 {
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+        color: white;
     }
     
     .wrapper {
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
         align-content: center;
         justify-content: center;
-        padding: 10px;
         overflow: hidden;
-        border: 3px solid;
+        padding: 10px;
+        border: 2px dashed;
         background: white;
-    }
-    
-    .desktop .wrapper {
-        margin: 10px;
     }
     
     span {
@@ -57,11 +60,9 @@
     #image {
         background-size: contain;
         background-repeat: no-repeat;
-        justify-content: center;
         background-position: top left;
-        flex: 1;
         height: 60vh;
-        width: 60vh;
+        width: 100%;
     }
     
     #image div {
@@ -80,12 +81,46 @@
         cursor: pointer;
     }
     
-    #save {
-        border: 3px solid;
+    .buttons {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    
+    .buttons div {
+        border: 2px solid black;
         padding: 10px;
         margin-top: 10px;
         font-weight: bold;
-        font-size: 5vmin;
+        font-size: 24px;
+        flex: 1;
+    }
+    
+    .desktop .buttons div:first-child {
+        border-right: 0;
+    }
+    
+    .desktop .buttons div:hover {
+        background: black;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .mobile h1 {
+        display: none
+    }
+    
+    .mobile .rapper {
+        width: 100%;
+        padding:10px;
+    }
+    
+    .mobile .wrapper {
+        border: 0;
+        padding:0;
+    }
+    
+    .mobile .buttons {
+        flex-direction: column;
     }
     </style>
 </head>
@@ -99,8 +134,13 @@
                     <input type="file">
                 </div>
             </div>
+        </div>
+        <div class="buttons">
             <div id="save">
                 Save
+            </div>
+            <div id="reset">
+                Reset
             </div>
         </div>
         <footer>
